@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+:root {
+  --error: #dc3545;
+  --dark-blue: #032541;
+  --hover-dark-blue: #0d416b;
+  --border-radius-lg: 8px;
+  --border-radius: 4px;
+  --skeletion: rgba(0, 0, 0, 0.1);
+  --page-padding-y: 24px;
+
+  @media (max-width: #{$breakpoint-md-max}) {
+    --page-padding-y: 12px;
+  }
+}

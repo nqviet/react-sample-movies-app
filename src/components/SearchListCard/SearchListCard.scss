@@ -1,0 +1,48 @@
+@use '../../styles/variables' as *;
+
+.csearch-list-card {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+
+  .release-date {
+    color: rgba(#000, 0.5);
+  }
+
+  &.grid-view {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    .poster {
+      border-radius: var(--border-radius-lg);
+    }
+  }
+
+  &.list-view {
+    display: flex;
+
+    .poster {
+      margin-right: 24px;
+      border-radius: var(--border-radius-lg);
+    }
+
+    .right-content {
+      display: flex;
+      flex-direction: column;
+
+      .overview {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  @media (max-width: #{$breakpoint-md-max}) {
+    &.list-view {
+      .right-content {
+        .overview {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

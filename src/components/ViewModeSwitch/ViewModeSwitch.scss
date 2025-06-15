@@ -1,0 +1,18 @@
+.cview-switch {
+  width: fit-content;
+  margin: 0 0 24px auto;
+
+  button {
+    &:not(.active) {
+      [stroke] {
+        color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.active {
+      [stroke] {
+        color: var(--dark-blue);
+      }
+    }
+  }
+}

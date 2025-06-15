@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.cbanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 360px;
+  background-color: #fafafa;
+
+  .banner-content {
+    width: 100%;
+    max-width: $page-max-width;
+    padding: 0 var(--page-padding-y);
+    margin: 0 auto;
+
+    .banner-search-bar {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+
+.cmovie-list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+  gap: 10px 20px;
+}
+
+.cmovie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+
+  @media (max-width: #{$breakpoint-md-max}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: #{$breakpoint-sm-max}) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: #{$breakpoint-xs-max}) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

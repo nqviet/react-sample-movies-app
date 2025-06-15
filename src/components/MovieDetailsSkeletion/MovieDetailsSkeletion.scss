@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+@use '../../styles//mixins' as *;
+
+@include skeletion-animation;
+
+.cmovie-details-skeletion {
+  .movie-details-content {
+    display: flex;
+    max-width: $page-max-width;
+    padding: 32px var(--page-padding-y);
+    margin: 0 auto;
+    z-index: 1;
+
+    .poster {
+      width: 300px;
+      height: 450px;
+      border-radius: var(--border-radius-lg);
+      @include skeletion-loading;
+    }
+
+    .right-content {
+      padding: 16px 24px;
+      flex: auto;
+
+      .title {
+        width: 150px;
+        height: 1.375rem;
+        @include skeletion-loading;
+      }
+
+      .sub-title {
+        margin-top: 0.5rem;
+        width: 75px;
+        height: 1.375rem;
+        @include skeletion-loading;
+      }
+
+      .vote {
+        margin-top: 2rem;
+        width: 40px;
+        height: 40px;
+        @include skeletion-loading;
+      }
+
+      .overview {
+        margin-top: 3rem;
+        width: 90%;
+        height: 5.38rem;
+        @include skeletion-loading;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+
+.cpage-content {
+  max-width: $page-max-width;
+  min-height: 75vh;
+  padding: 24px var(--page-padding-y);
+  margin: 0 auto;
+}

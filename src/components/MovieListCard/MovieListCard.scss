@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+
+.cmovie-list-card {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+
+  .release-date {
+    color: rgba(#000, 0.5);
+  }
+
+  .vote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(#fff, 0.75);
+    border: 1px solid rgba(#000, 0.1);
+    border-radius: 50%;
+
+    font-weight: 700;
+    color: #000;
+  }
+
+  &.grid-view {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    .poster {
+      border-radius: var(--border-radius-lg);
+    }
+
+    .vote {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 4px 4px 0 0;
+    }
+  }
+
+  &.list-view {
+    display: flex;
+
+    .poster {
+      margin-right: 24px;
+      border-radius: var(--border-radius-lg);
+    }
+
+    .vote {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 4px 0 0 4px;
+    }
+
+    .right-content {
+      display: flex;
+      flex-direction: column;
+
+      .overview {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  @media (max-width: #{$breakpoint-md-max}) {
+    &.list-view {
+      .right-content {
+        .overview {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

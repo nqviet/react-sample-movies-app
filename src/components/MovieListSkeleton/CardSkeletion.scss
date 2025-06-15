@@ -1,0 +1,100 @@
+@use '../../styles//mixins' as *;
+
+@include skeletion-animation;
+
+.ccard-skeletion {
+  position: relative;
+  border: 1px solid var(--skeletion);
+  border-radius: var(--border-radius-lg);
+
+  &.grid-view {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    width: 150px;
+    height: 320px;
+
+    .poster {
+      height: 225px;
+      @include skeletion-loading;
+    }
+
+    .vote {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    .title {
+      margin-top: 0.5rem;
+      height: 1rem;
+      @include skeletion-loading;
+    }
+
+    .release-date {
+      margin-top: 0.5rem;
+      width: 25%;
+      height: 1rem;
+      @include skeletion-loading;
+    }
+
+    .overview {
+      margin-top: 1rem;
+      width: 75%;
+      height: 1rem;
+      @include skeletion-loading;
+    }
+  }
+
+  &.list-view {
+    display: flex;
+    padding: 4px;
+
+    .poster {
+      width: 150px;
+      height: 225px;
+      @include skeletion-loading;
+    }
+
+    .vote {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      flex: auto;
+      padding: 4px 24px;
+
+      .title {
+        width: 150px;
+        height: 1.375rem;
+        @include skeletion-loading;
+      }
+
+      .release-date {
+        margin-top: 0.5rem;
+        width: 50px;
+        height: 1.375rem;
+        @include skeletion-loading;
+      }
+
+      .overview {
+        margin-top: 2rem;
+        width: 90%;
+        height: 2.75rem;
+        @include skeletion-loading;
+      }
+    }
+  }
+}

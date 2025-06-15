@@ -1,0 +1,17 @@
+.clazy-img {
+  background: transparent;
+
+  &.error {
+    display: none;
+  }
+
+  + .no-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 225px;
+    background-color: #fafafa;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,8 @@
+@use './variables';
+@forward './reset';
+@forward './theme';
+
+body {
+  margin: 0;
+  font: 400 1rem / 1.375 Roboto;
+}
